@@ -6,13 +6,19 @@
 
 # Generate a random "Movie Jobs" instance.
 
+# Generated intervals are "half-open": they
+# are considered to start at the start position
+# and end just before the end position.
+
 from random import randrange
 from sys import argv
 
 def geninst(n):
+    "Generate an instance of size n."
+
     intervals = []
     for _ in range(n):
-        width = randrange(1, n + 1)
+        width = randrange(1, n)
         start = randrange(4 * n - width)
         end = start + width
         intervals.append((start, end))
