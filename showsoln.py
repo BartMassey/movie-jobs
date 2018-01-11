@@ -53,6 +53,7 @@ def read_intervals(f):
 if __name__ == "__main__":
     # Set up the display.
     setworldcoordinates(0, 0, 1, 1)
+    speed(8)
 
     # Read instance and solution from stdin.
     inst = read_intervals(open(argv[1], "r"))
