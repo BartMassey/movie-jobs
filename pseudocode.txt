@@ -1,0 +1,44 @@
+MOVIE JOBS
+
+Instance: Finite set of intervals I subset of
+  {(start, end) | start, end in Nat and end > start}
+
+Find: Subset J of I such that J contains no overlaps
+  maximizing |J|
+
+
+
+movie-jobs(I):
+  Jmax <- emptyset
+  for J in subsets(I)
+      if |J| <= |Jmax|
+          continue
+      if has-overlaps(J)
+          continue
+      Jmax <- J
+  return Jmax
+
+subsets(S):
+  T <- emptyset
+  for e in S
+      V = emptyset
+      for W in T
+          insert (W union E) in V
+      T <- V union W
+  return T
+
+has-overlaps(S):
+  for i in S
+      for j in S
+          if i = j
+              continue
+          if overlap(i, j)
+              return true
+  return false
+
+overlap(i, j):
+  if i.start >= j.start and i.start < j.end
+      return true
+  if j.start >= i.start and j.start < i.end
+      return true
+  return false
