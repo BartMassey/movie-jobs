@@ -16,6 +16,9 @@ the rest is up to you.
   given size. It includes a command-line driver to
   emit such an instance of size given on the command line.
 
+* `showinst.py` displays an instance and solution given on
+  the command line using Turtle Graphics.
+
 This program is licensed under the "MIT License".  Please
 see the file LICENSE in the source distribution of this
 software for license terms.
