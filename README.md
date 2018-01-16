@@ -10,7 +10,11 @@ the rest is up to you.
 
 * `pseudocode.txt` is pseudocode for a full solution.
 
-* `subsets.py` generates all subsets of a given set.
+* `subsets.py` generates all subsets of a given set in
+  Python.
+
+* `subsets.c`, `solve.h`, `Makefile` generatest all subsets
+  of a given set in C. `test_subsets.c` shows how to use it.
 
 * `geninst.py` generates a random movie job instance of a
   given size. It includes a command-line driver to
